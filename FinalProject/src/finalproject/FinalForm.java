@@ -44,17 +44,8 @@ public class FinalForm extends javax.swing.JFrame {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         turnActionTaken = false;
         // tutorial
-        print("Please read me in navi's voice. This is the tutorial, ignore me if you want.", jTextArea1);
-        print("Click attack (sword) to attack with your sword!", jTextArea1);
-        print("Click attack (magic) to attack with magic!", jTextArea1);
-        print("Click block to block the enemy, you can take damage though, even on a sucess.", jTextArea1);
-        print("Click dodge to attempt to avoid all damage.", jTextArea1);
-        print("Click Heal to heal yourself!", jTextArea1);
-        print("Click fireball to unleash a powerful attack, but be warned that you can harm yourself.", jTextArea1);
-        print("Click end turn to end your turn after the enemy moves!", jTextArea1);
-        print("You will levelup occasionally, this is a good thing.", jTextArea1);
-        print("also, keep this to yourself, but you are special, so your mana doesn't depete, your welcome.", jTextArea1);
-        lore();
+        textBoxString = "You are in a world destroyed, it was destroyed many years ago the gods fought, as they used the entire world as their battlefield.\n Their magics destroyed reality, causing the sky to change colors without warning.\n They threw mountains in the middle of plains, caused the weather to change without warning or reason.\n Now it snows in deserts, and jungles alternate between unbearably dry and flooded\n To fight their battles they unleashed monsters upon the world, the few remaining strongholds of humanity have decided to send men out to kill the monsters that ravage their crops and attack them nightly.\n You are one of those men, this is your chance to pay of your debts and live in luxury.\n The most important debt to pay off is your largest, in order to take on these monsters you took classes from the magi and bought from them a powerful artifact.\n It allows you to absorb the souls of the monsters to gain strength, however after you bought this artifact the mage who sold it to you revealed the catch...\n Monsters absorb the souls of their brethren to grow stronger, so the more monsters you kill, the stronger the monsters who come after you will be.\nHowever, the mage guild will buy the artifact from you, and they will pay more for each soul absorbed.\nYou wait until the monsters have been defeated in an assault on the city, then sneak past their lines, out into the shattered world\n\n\n\n\n\nPlease read me in navi's voice. This is the tutorial, ignore me if you want. \nClick attack (sword) to attack with your sword!\nClick attack (magic) to attack with magic!\nClick block to block the enemy, you can take damage though, even on a sucess.\nClick dodge to attempt to avoid all damage.\nClick Heal to heal yourself! \nClick fireball to unleash a powerful attack, but be warned that you can harm yourself.\nClick end turn to end your turn after the enemy moves!\nYou will levelup occasionally, this is a good thing. \nalso, keep this to yourself, but you are special, so your mana doesn't depete, your welcome."; 
+        print("", jTextArea1);
         backroundUpdate();
     }
 
@@ -377,8 +368,7 @@ public class FinalForm extends javax.swing.JFrame {
             print("Enemy Down", jTextArea1);
             print("enemy.health = " + enemy.health, jTextArea1);
             backroundUpdate();
-            
-            
+                       
         }
         
         if(p1.health <= 0){
@@ -463,7 +453,9 @@ public class FinalForm extends javax.swing.JFrame {
         }
         textBox[0] = a;
         for(int b = 14; b >= 0; --b){
+            if (textBox[b] != null){
             textBoxString += textBox[b] + "\n";
+            }
         }
         jTextArea1.setText(textBoxString);
     }
