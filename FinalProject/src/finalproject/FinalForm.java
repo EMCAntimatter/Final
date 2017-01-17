@@ -38,7 +38,11 @@ public class FinalForm extends javax.swing.JFrame {
     
     public FinalForm() {
         initComponents();
-                       
+        
+        jLabel7.setText(p1.health + "/" + p1.healthMax);
+        jLabel5.setText(p1.mana + "/" + p1.manaMax);
+        jLabel6.setText(p1.xp + "/" + p1.xpMax);
+        
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         turnActionTaken = false;
         // tutorial
