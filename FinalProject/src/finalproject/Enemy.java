@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package finalproject;
-
 import javax.swing.JTextArea;
-
 /**
  *
  * @author 19hilyo
