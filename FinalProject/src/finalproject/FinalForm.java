@@ -508,3 +508,4 @@ public class FinalForm extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration                   
 }
+ 
